@@ -81,3 +81,9 @@ console.log('Pepe', isNaN('Pepe'));
 
 console.log(Number.isNaN('Pepe'));
 console.log(Number.isNaN(0 / 0));
+
+const t = 2;
+const big = 2n;
+console.log(BigInt(t) + big);
+console.log(2 + Number('2'));
+console.log(2 + +'2');
