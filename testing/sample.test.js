@@ -29,15 +29,24 @@ describe('Testing division', () => {
         expect(division(a, b)).toBe(2);
     });
 
-    test('if b = 0 , return should be "Error"', () => {
+    test('if b = 0 , should throw an Error', () => {
         let a = 2;
         let b = 0;
         expect(() => {
             division(a, b);
         }).toThrow();
     });
-    test('if a = null , return should be "Error"', () => {
+    test('if a = null , should throw an Error', () => {
         let a = null;
+        let b = 5;
+        try {
+            division(a, b);
+        } catch (e) {
+            expect(e.message).toBe('Error: parámetro no válido');
+        }
+    });
+    test('if a = pepe, should throw an Error', () => {
+        let a = 'Pepe';
         let b = 5;
         try {
             division(a, b);
