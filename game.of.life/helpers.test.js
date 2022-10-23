@@ -3,7 +3,7 @@ import {
     countAliveNeighbors,
     willBeAlive,
     liveCycle,
-} from './check';
+} from './helpers.js';
 
 describe('Given findValidNeighbors function', () => {
     describe('When the array is 3 x 3', () => {
